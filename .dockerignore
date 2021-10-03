@@ -1,0 +1,5 @@
+.vscode/*
+.git**
+README.md
+docker-bake.hcl
+sample_config.toml
