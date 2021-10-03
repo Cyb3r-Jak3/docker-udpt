@@ -3,8 +3,6 @@ target "docker-metadata-action" {
     platforms = [
         "linux/amd64",
         "linux/arm64",
-        "linux/386",
-        "linux/s390x"
     ]
 }
 
