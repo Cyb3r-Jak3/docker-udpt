@@ -13,4 +13,8 @@ The `alpine` tag is based of the latest tag of the alpine images. The `distroles
 
 Both images use a config location of `/config.toml`
 
-`docker run -d -v $PWD/config.toml -p 1212:1212/udp cyb3rjak3/udpt:distroless`
+`docker run -d -v $PWD/config.toml:/config.toml:ro -p 1212:1212/udp cyb3rjak3/udpt:distroless`
+
+## Configuration
+
+There is a [sample config](sample_config.toml) and to read more about configuration read the [documentation](https://naim94a.github.io/udpt/config.html)
