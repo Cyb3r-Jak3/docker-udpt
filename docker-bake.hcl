@@ -23,7 +23,7 @@ target "distroless" {
 }
 
 target "distroless-release" {
-    inherits = ["distroless", "docker-metadata-action"]
+    inherits = ["docker-metadata-action", "distroless"]
     cache-to = [
         "type=registry,mode=max,ref=ghcr.io/cyb3r-jak3/docker-udpt-cache:distroless"
     ]
@@ -35,7 +35,7 @@ target "distroless-release" {
     ]
 }
 target "alpine-release" {
-    inherits = ["alpine", "docker-metadata-action"]
+    inherits = ["docker-metadata-action", "alpine"]
     cache-to = [
         "type=registry,mode=max,ref=ghcr.io/cyb3r-jak3/docker-udpt-cache:alpine"
     ]
