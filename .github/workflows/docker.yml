@@ -65,4 +65,6 @@ jobs:
           ${{ steps.meta.outputs.bake-file }}
         targets: ${{ matrix.target }}-release
         push: ${{ startsWith(github.ref, 'refs/tags/v') }}
-
+        set: |
+            *.cache-from=type=gha,scope=buildx-${{ matrix.target }}
+            *.cache-to=type=gha,mode=max,scope=${{ matrix.target }}
