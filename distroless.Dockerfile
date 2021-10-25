@@ -8,8 +8,9 @@ RUN git clone https://github.com/naim94a/udpt.git && \
     cargo build --release
 
 FROM gcr.io/distroless/static
+ENV HTTP_PORT=1212
 
 WORKDIR /udpt
 COPY --from=builder /udpt/target/release/udpt-rs ./udpt-rs
-EXPOSE 1212/udp
+EXPOSE ${HTTP_PORT}/udp
 ENTRYPOINT [ "./udpt-rs", "-c", "/config.toml" ]
