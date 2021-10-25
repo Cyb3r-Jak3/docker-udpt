@@ -37,7 +37,7 @@ jobs:
 
     - name: Docker Meta
       id: meta
-      uses: docker/metadata-action@v3.5.0
+      uses: docker/metadata-action@v3.6.0
       with:
         images: cyb3rjak3/udpt,ghcr.io/cyb3r-jak3/udpt
         tags: |
