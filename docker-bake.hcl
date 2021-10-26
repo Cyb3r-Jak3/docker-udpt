@@ -7,7 +7,8 @@ target "docker-metadata-action" {
 }
 
 target "alpine" {
-    dockerfile = "alpine.Dockerfile"
+    dockerfile = "Dockerfile"
+    target = "alpine"
     tags = [
         "ghcr.io/cyb3r-jak3/docker-udpt:alpine",
         "cyb3rjak3/docker-udpt:alpine"
@@ -15,7 +16,8 @@ target "alpine" {
 }
 
 target "distroless" {
-    dockerfile = "distroless.Dockerfile"
+    dockerfile = "Dockerfile"
+    target = "distroless"
     tags = [
         "ghcr.io/cyb3r-jak3/docker-udpt:distroless",
         "cyb3rjak3/docker-udpt:distroless"
