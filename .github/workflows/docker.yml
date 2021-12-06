@@ -9,7 +9,7 @@ on:
     paths:
       - .github/workflows/docker.yml
       - "docker-bake.hcl"
-      - "*.Dockerfile"
+      - "Dockerfile"
 
 jobs:
 
